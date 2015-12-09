@@ -1,34 +1,4 @@
-File created on 22.06.2010 at 11:23:34
-
-[header]
-satellites
-time
-latitude
-longitude
-velocity kmh
-heading
-height
-vertical velocity kmh
-yaw rate deg/s
-Slip Angle
-YAW__
-YAW_
-
-[channel units]
-grad
-Deg/s
-Deg/s
-
-[comments]
-Log Rate (Hz) : 10
-Software Version : 1.8.2 (Build 014)
-UnitType: VBOX Mini / DriftBox
-Track Offset (meter):0,00;0,00
-Track Offset (meter):0,00;0,00
-
-[column names]
 sats,time,lat,long,velocity,heading,height,vert-vel,yaw-calc,slip,YAW__,YAW_,
-[data]
 "008","073910,50","+02473,74133","-00100,58397","000,000","000,00","+00102,45","+000,000","+000,0","+0,00000E+00","+0,00000E+00","+0,00000E+00",
 "008","073910,60","+02473,74133","-00100,58397","000,000","280,68","+00102,45","+000,000","+000,0","+0,00000E+00","+0,00000E+00","+0,00000E+00",
 "008","073910,70","+02473,74133","-00100,58396","000,000","154,27","+00102,45","+000,000","+000,0","+0,00000E+00","+0,00000E+00","+0,00000E+00",

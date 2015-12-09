@@ -1,29 +1,4 @@
-File created on 27.06.2010 at 10:03:26
-
-[header]
-satellites
-time
-latitude
-longitude
-velocity kmh
-heading
-height
-vertical velocity kmh
-yaw rate deg/s
-YAW__
-YAW_
-
-[channel units]
-Deg/s
-Deg/s
-
-[comments]
-Log Rate (Hz) : 10
-Software Version : 1.6.4 (Build 003)
-
-[column names]
 sats,time,lat,long,velocity,heading,height,vert-vel,yaw-calc,YAW__,YAW_,
-[data]
 "008","070623,70","+03067,55089","-00425,65891","000,000","049,30","+00277,06","+000,000","+000,0","+0,00000E+00","+0,00000E+00",
 "008","070623,80","+03067,55089","-00425,65891","000,000","049,30","+00277,06","+000,000","+000,0","+0,00000E+00","+0,00000E+00",
 "008","070623,90","+03067,55089","-00425,65891","000,000","003,81","+00277,07","+000,000","+000,0","+0,00000E+00","+0,00000E+00",
