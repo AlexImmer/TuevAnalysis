@@ -1,23 +1,18 @@
 Data format and comments for the contained data format follow. Comments apply only for CSV1 and 2 as they were recorded with a VBOX Mini / DriftBox. The third file misses the Slip Angle as header since it was recorded with another device.
 
 [header]
-satellites
-time
-latitude
-longitude
-velocity kmh
-heading
-height
-vertical velocity kmh
-yaw rate deg/s
-Slip Angle
-YAW__
-YAW_
-
-[channel units]
-grad
-Deg/s
-Deg/s
+satellites (no.)
+time (as a number)
+latitude (deg)
+longitude (deg)
+velocity (kmh)
+heading (deg)
+height (m)
+vertical velocity (kmh)
+yaw rate (deg/s) 
+Slip Angle (deg)
+YAW__ (inv)
+YAW_ (inv)
 
 [comments]
 Log Rate (Hz) : 10
