@@ -4,11 +4,18 @@ def read_acc_log(line):
     z_pos = line.find('z:')
     x = float(line[x_pos+3:y_pos -1])
     y = float(line[y_pos+3:z_pos -1])
-    z = float(line[y_pos+3:])
+    z = float(line[z_pos+3:])
     return x, y, z
        
 def read_alert_log(line):
-    return line[line.find('(:')+3]
+    return line[line.find('):')+3:]
+
+def read_gps_log(line):
+    return float(line[line.find('):')+3:])
+
+def read_time_log(line):
+    pos = line.find('Europe')-9
+    return line[pos:pos+8]
 
 def read_device_log(filename):
     res = {
@@ -17,8 +24,8 @@ def read_device_log(filename):
         'acc_z' : [],
         'gps' : [],
         'time' : [],
-        'alert' : []
-    }
+        'alert' : []}
+    
     for line in open(filename):
         if line.startswith('D/CAAccData'):
             gy = read_acc_log(line)
@@ -28,6 +35,7 @@ def read_device_log(filename):
         elif line.startswith('I/CrashAlert'):
             res['alert'].append(read_alert_log(line))
         elif line.startswith('D/CrashAlertGPS'):
-            pass
+            res['gps'].append(read_gps_log(line))
         elif line.startswith('D/CAAccTime'):
-            pass
+            res['time'].append(read_time_log(line))
+    return res 
