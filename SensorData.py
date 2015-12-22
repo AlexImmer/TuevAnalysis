@@ -16,6 +16,9 @@ class SensorData(object):
     def gyro_sum(self):
         return self.x + self.y + self.z
     
+    def gyro_abs_sum(self):
+        return np.abs(self.x) + np.abs(self.y) + np.abs(self.z)
+    
     @classmethod
     def to_secs(cls, t):
         h = int(t[:2])
