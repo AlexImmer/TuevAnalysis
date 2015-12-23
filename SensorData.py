@@ -1,5 +1,6 @@
 import numpy as np
 
+
 class SensorData(object):
     def __init__(self, x, y, z, gps, time, alert):
         self.x = x
@@ -8,6 +9,7 @@ class SensorData(object):
         self.speed = gps
         self.time = self.to_secs(time)
         self.alerts = alert
+        self.acc = 0
         
     def gyro_force(self):
         rms = self.x ** 2 + self.y ** 2 + self.z ** 2
@@ -25,3 +27,11 @@ class SensorData(object):
         m = int(t[3:5])
         s = int(t[6:])
         return 60 ** 2 * h + 60 * m + s
+
+    
+def add_speed(sensors):
+    init_spd = 0
+    for i in range(len(sensors)):
+        sensors[i].acc = (sensors[i].speed - init_spd) * 1000/3600
+        init_spd = sensors[i].speed
+       
