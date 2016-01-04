@@ -11,15 +11,9 @@ class SensorData(object):
         self.alerts = alert
         self.acc = 0
         
-    def gyro_force(self):
+    def acc_force(self):
         rms = self.x ** 2 + self.y ** 2 + self.z ** 2
         return np.sqrt(rms)
-    
-    def gyro_sum(self):
-        return self.x + self.y + self.z
-    
-    def gyro_abs_sum(self):
-        return np.abs(self.x) + np.abs(self.y) + np.abs(self.z)
     
     @classmethod
     def to_secs(cls, t):
